@@ -34,3 +34,28 @@ def isToepliz(mat):
                 return False
     return True
 #mat is matrix
+
+
+#------------------------------------------------------------------------------
+#JS
+function isToeplitz(matrix) {
+    const n = matrix.length;
+    const m = matrix[0].length;
+    for (let i = 1; i < n; i++) {
+        for (let j = 1; j < m; j++) {
+            if (matrix[i][j] !== matrix[i - 1][j - 1]) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+#-------
+const matrix = [
+    [1, 2, 3, 4],
+    [5, 1, 2, 3],
+    [9, 5, 1, 2]
+];
+
+console.log(isToeplitz(matrix));  // Output: true
