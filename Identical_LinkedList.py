@@ -1,3 +1,7 @@
+'''Given the two singly Linked Lists respectively. The task is to check whether two linked lists are identical or not. 
+Two Linked Lists are identical when they have the same data and with the same arrangement too. If both Linked Lists are identical then return true otherwise return false.'''
+
+
 '''
 # Node Class    
 class node:
