@@ -29,6 +29,8 @@ w=list(map(int,input().split()))
 for i in w:
     lst.append(4000//i-1)
 print(*lst)
+
+
 #Facing The Sun
 ars=int(input())
 H=list(map(int, input().strip().split()))
