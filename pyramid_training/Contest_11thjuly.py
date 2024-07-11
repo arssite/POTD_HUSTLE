@@ -66,6 +66,81 @@ print(summ)
 
 #‐----------------------------
 
+'''NIET09112024 P3
+0
+DAYS
+:
+2
+HRS
+:
+28
+MINS
+:
+43
+SECS
+DEADLINE:JULY 11TH 2024, 11:00:00 PM
+ChaturaIT Logo
+Divider Logo
+jumping frogs
+The Treasure Hunt
+Switches and Electricity Bill
+Natural numbers sum
+Credit card
+ Description
+ My Submissions
+ Editorial
+Jumping Frogs
+Easy
+0
+
+0
+
+Description:
+N frogs are positioned at one end of the pond. All frogs want to reach the other end of the pond as soon as possible. The pond has some leaves arranged in a straight line. Each frog has the strength to jump exactly K leaves. For example, a frog having strength 2 will visit the leaves 2, 4, 6, ... etc. while crossing the pond.
+
+Given the strength of each frog and the number of leaves, your task is to find the number of leaves that not be visited by any of the frogs when all frogs have reached the other end of the pond. 
+
+Input Format:
+First Line contains A Integer N
+
+Second Line contains Integer leaves
+
+Third Line contains Space separated Integers representing the strength of each frog
+
+Output Format:
+The number of leaves that not be visited by any of the frogs
+
+Constraints:
+1 ≤ N, leaves, frogs[i] ≤ 10^5
+
+Public Test Cases:
+Test Case 1:
+Input:
+3
+
+6
+
+1 2 4
+
+Output:
+0
+
+Explanation:
+Self Explanatory'''
+def ars(N, leaves, strengths):
+    visited = set()
+    for strength in strengths:
+        for leaf in range(strength, leaves + 1, strength):
+            visited.add(leaf)
+    unvisited_count = leaves - len(visited)
+    return unvisited_count
+
+n= int(input())
+leaves = int(input())
+strengths = list(map(int, input().split()))
+result = ars(n, leaves, strengths)
+print(result)
+
 
 '''There are n switches in a house. The number of units of electricity consumed per hour when a switch is on is given. An integer k is given and the switches' indexes divisible by k are the switches that are on. Each unit costs 12 rupees. Find the bill amount of the house for 10 hours.
 
