@@ -107,8 +107,76 @@ t=0
 for i in range(1, n + 1):
     if i % k == 0:
         t+= arr[i - 1]
-total_units= t*10
-total_bill =total_units * 12
-print(total_bill)
+totalunits= t*10
+totalbill =totalunits * 12
+print(totalbill)
 
 #----------------------------------
+
+
+'''In the vast desert of the Lost Sands, there lies a hidden treasure buried beneath the dunes. Legend has it that the treasure can only be uncovered by finding the maximum sum of a subarray whose total value is less than or equal to a specific threshold value, X.
+
+
+
+Guided by ancient maps and cryptic clues, adventurers journey into the desert, armed with their knowledge and determination. Each step brings them closer to the elusive treasure, hidden amidst the shifting sands and scorching sun.
+
+
+
+Your task is to assist these brave souls in their quest by writing a program that calculates the sum of the most valuable subarray that meets the given condition: its sum must not exceed the threshold value X. With your help, they can uncover the riches hidden beneath the desert sands and fulfill their destiny as legendary treasure hunters.
+
+Input Format:
+The first line contains two integers separated by a space: N (the size of the array) and X (the target sum).
+
+The second line contains N integers separated by a space, representing the elements of the array.
+
+Output Format:
+Print the sum of the subarray having the maximum sum less than or equal to the given value of X.
+
+Constraints:
+1 ≤ N ≤ 1000
+
+1 ≤ arr[i] ≤ 104
+
+Public Test Cases:
+Test Case 1:
+Input:
+5 11
+
+1 2 3 4 5
+
+Output:
+10
+
+Explanation:
+Subarray having maximum 
+
+sum is {1, 2, 3, 4}.
+
+Test Case 2:
+Input:
+5 7
+
+2 4 6 8 10
+
+Output:
+6
+
+Explanation:
+Subarray having maximum 
+
+sum is {2, 4} or {6}.'''
+inp= input().split()
+N = int(inp[0])
+X = int(inp[1])
+arr = list(map(int, input().split()))
+sum,current,start= 0
+for end in range(N):
+    current+= arr[end]
+    while current > X and start <= end:
+        current -= arr[start]
+        start += 1
+    if current<= X:
+        sum = max(sum, current)
+print(sum)
+
+#-------------------
