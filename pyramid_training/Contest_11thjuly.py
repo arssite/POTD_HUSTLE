@@ -23,3 +23,45 @@ if ars>77000 or ars%5 == 0:print("YES")
 else:print("NO")
 
 #-------‐-----------------------------
+
+'''Given a positive integer N, print the sum of 1st N natural numbers.
+
+Input Format:
+First and only line of input contains a positive integer - N.
+
+Output Format:
+Print the sum of 1st N natural numbers.
+
+Constraints:
+1 <= N <= 1018
+
+Public Test Cases:
+Test Case 1:
+Input:
+4
+
+Output:
+10
+
+Explanation:
+Test Case 2:
+Input:
+1
+
+Output:
+1
+
+Explanation:
+Test Case 3:
+Input:
+5
+
+Output:
+15
+'''
+ars=int(input())
+summ= ars*(ars+1)// 2
+print(summ)
+
+
+#‐----------------------------
