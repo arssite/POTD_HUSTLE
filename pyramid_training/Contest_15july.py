@@ -1,4 +1,4 @@
-'''NIET015072024 P3
+9'''NIET015072024 P3
 0
 DAYS
 :
@@ -364,7 +364,7 @@ index0 and index4. So power collected by kid = 7+4 = 13'''
 n=int(input())      
 lst=list(map(int, input().split()))  
 k = int(input())     
-ars = arr[::k]     
+ars = ars[::k]     
 print(sum(ars))
 
 
