@@ -282,24 +282,91 @@ aaaceghiilnnrrsttu
 
 Explanation:
 Self Explanatory'''
-# Read input
-n = int(input())  # Length of the string
-arr = input().strip()  # Input string
-
-# Initialize the count array for 26 lowercase English letters
+n = int(input()) 
+ars = input().strip()  
 count = [0] * 26
-
-# Count the occurrence of each character in the input string
-for char in arr:
+for char in ars:
     count[ord(char) - ord('a')] += 1
-
-# Construct the sorted string
 sorted_string = []
 for i in range(26):
     sorted_string.extend([chr(i + ord('a'))] * count[i])
-
-# Print the result
 print(''.join(sorted_string))
+
+
+#_________________________________
+
+
+'''
+The Marvel Game
+Check if the Array is Sorted
+Counting Sort
+Rope Cutting
+The People's Nation and Democracy
+ Description
+ My Submissions
+ Editorial
+The Marvel Game
+Easy
+0
+
+0
+
+Description:
+There is kid who is a super duper fan of Marvel. And he went to a trip onto a Marvel Kingdom. The marvel kingdom consists of idols of marvel heroes in a row. In this kingdom the kids are given a jumping tool with capacity of k jumps. Each idol of the Marvel super hero is marked with some power. The kid starts at the first super hero and jumps k times and from there he continues jumping till the end. And at every landing he collects the power at that super hero. Find the total power collected by the kid.
+
+Input Format:
+n - number of marvel heroes in the marvel kingdom
+
+arr - power of each super hero.
+
+k - Number of jumps that the tool can make at a time.
+
+Output Format:
+The total power acquired by the kid.
+
+Constraints:
+1<=n<=105
+
+1<=arr[i]<=1000
+
+1<=k<n
+
+Public Test Cases:
+Test Case 1:
+Input:
+5
+
+1 2 3 4 5
+
+2
+
+Output:
+9
+
+Explanation:
+Kid starts at index 0 then jumps to index 2 and then to index 4. So power collected = 1+3+5=9
+
+Test Case 2:
+Input:
+6
+
+7 8 9 3 4 5
+
+4
+
+Output:
+11
+
+Explanation:
+index0 and index4. So power collected by kid = 7+4 = 13'''
+
+
+n=int(input())      
+lst=list(map(int, input().split()))  
+k = int(input())     
+ars = arr[::k]     
+print(sum(ars))
+
 
 
 
