@@ -256,4 +256,88 @@ print(unlit_candles)
 
 
 #_________________________________
+'''NIET016072024 P3
+0
+DAYS
+:
+2
+HRS
+:
+24
+MINS
+:
+5
+SECS
+DEADLINE:JULY 16TH 2024, 11:00:00 PM
+ChaturaIT Logo
+Divider Logo
+Find the Number of Unlit Candles
+World of Coders
+Maximum Number of Funded Temples
+Tertiary Maximum Finder
+ Description
+ My Submissions
+ Editorial
+World Of Coders
+Medium
+0
+
+0
+
+Description:
+There are n coders participating in a hackathon. Each coder is placed in a certain seat numbered as index+1 of the coder. Each coder is assigned a rank based on performance. Now the task of a newbie coder is simple. He has to find the seat numbers of top k coders in the hackathon. Same rank can be achieved by multiple coders in that case start with maximum seat number first.
+
+Input Format:
+n- number of coders
+
+arr- ranks of coders
+
+k - number of coders to be found
+
+Output Format:
+The seat numbers of top-ranked k coders
+
+Constraints:
+1<n<=106
+
+1<=arr[i]<=106
+
+1<=k<=n
+
+Public Test Cases:
+Test Case 1:
+Input:
+5
+
+1 2 3 4 5
+
+3
+
+Output:
+5 4 3
+
+Explanation:
+Top 3 coders are with ranks 5,4,3 and their seat numbers are 1+index so 5,4,3
+
+Test Case 2:
+Input:
+4
+
+1 2 2 2
+
+2
+
+Output:
+4 3
+
+Explanation:
+The top 2 coders are equally ranked. So starting with a large seat number. So 4 then 3'''
+
+n = int(input())
+ars = list(map(int, input().split()))
+k = int(input())
+rank =[(ars[i], i + 1) for i in range(n)]
+rank.sort(key=lambda x: (x[0], x[1]), reverse=True)
+top= [rank[i][1] for i in range(k)]
+print(' '.join(map(str, top)))
 
