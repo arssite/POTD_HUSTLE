@@ -37,3 +37,21 @@ class Solution:
 # Example usage:
 sol = Solution()
 print(sol.prime_Sum(50))  # Example to get the sum of all primes up to 50
+#-------------------------------------
+
+#O(n)
+class Solution:
+    def sieveOfEratosthenes(self, N):
+    	#code here 
+    	prime=[]
+    	is_prime=[True]*(N+1)
+    	for i in range(2,N+1):
+    	    if is_prime[i]:
+    	        prime.append(i)
+    	    for j in prime:
+    	        if i*j>N:
+    	            break
+    	        is_prime[i*j]=False
+    	        if i%j==0:
+    	            break
+    	return prime
