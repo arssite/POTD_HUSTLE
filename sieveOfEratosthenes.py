@@ -55,3 +55,32 @@ class Solution:
     	        if i%j==0:
     	            break
     	return prime
+
+
+#---------------------------Segmented Sieve product-------------------------------------------
+
+from math import sqrt
+
+class Solution:
+
+    # Function to check if a number is prime.
+    def prime(self,n):
+        if n==1 or n==0:
+            return False
+        if n==2 or n==3:
+            return True
+        if n%2==0 or n%3==0:
+            return False
+        for i in range(5,int(sqrt(n))+1,6):
+            if n%i==0 or n%(i+2)==0:
+                return False
+        return True
+
+    # Function to calculate the product of prime numbers within the given range.
+    def primeProduct(self, L, R):
+        d=1
+        for i in range(L,R+1):
+            if self.prime(i):
+                d=d*i
+                d=d%(10**9+7)
+        return d%(10**9+7)
