@@ -8,7 +8,7 @@ Welcome to Geeks for Geeks' Problem of the Day repository! Here you'll find a cu
 
 ## About
 
-Geeks for Geeks is a renowned platform for computer science enthusiasts, offering a wide array of tutorials, articles, and challenges to help you master algorithms, data structures, and programming languages. The Problem of the Day feature aims to provide you with a daily dose of thought-provoking problems that are:
+Geeks for Geeks is a renowned platform for computer science enthusiasts, offering a wide array of tutorials, articles, and challenges to help you master algorithms, data structures, and programming languages.The Problem of the Day feature aims to provide you with a daily dose of thought-provoking problems that are:
 
 - **Diverse**: Covering topics from basic algorithms to advanced data structures.
 - **Educational**: Each problem is designed to teach you new concepts or reinforce existing ones.
