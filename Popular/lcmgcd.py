@@ -1,7 +1,7 @@
 class Solution:
     def lcmAndGcd(self, A , B):
         # Euclidean algorithm for GCD of two numbers:
-#The idea of this algorithm is, the GCD of two numbers doesn’t change if the smaller number is subtracted from the bigger number. This is the Euclidean algorithm by subtraction. It is a process of repeat subtraction, carrying the result forward each time until the result is equal to any one number being subtracted
+#Theidea of this algorithm is, the GCD of two numbers doesn’t change if the smaller number is subtracted from the bigger number. This is the Euclidean algorithm by subtraction. It is a process of repeat subtraction, carrying the result forward each time until the result is equal to any one number being subtracted
         def gcd(A,B):
             if B==0:
                 return A
