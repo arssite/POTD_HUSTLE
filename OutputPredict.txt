@@ -1,2 +1,10 @@
 1> Macros never evaluate.
-2>
+
+2>Switch Cases
+2.1>int !=float, float !=int but int==char 'A'==65
+2.2>if break not use match case to default all execute
+2.3> Duplicate cases through compile time error
+2.4> case 1: case2: printf("same for both cases")
+2.5> case labels always constant not variable int,float...
+2.6>printf("ars") returns 3 so can be use in switch condition
+2.7>default is optional if no case match then empty comes.
