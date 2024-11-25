@@ -15,7 +15,7 @@ class Solution:
     	return out
 
 # https://www.geeksforgeeks.org/problems/sieve-of-eratosthenes5242/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card
-
+#ss
 class Solution:
     def prime_Sum(self, n):
         if n < 2:
