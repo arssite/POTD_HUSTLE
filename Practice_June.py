@@ -21,3 +21,20 @@ for _ in range(int(input())):
         # print(items)
     max_i=max(items)
     print('yes' if items.count(max_i)==1 else 'no')
+    
+#Q: https://www.codechef.com/practice/course/arrays-strings-sorting/INTARR02/problems/LAPIN
+for _ in range(int(input())):
+    s = input()
+    n = len(s)
+
+    if n % 2 == 0:
+        left = s[:n//2]
+        right = s[n//2:]
+    else:
+        left = s[:n//2]
+        right = s[n//2 + 1:]
+
+    if sorted(left) == sorted(right):
+        print("YES")
+    else:
+        print("NO")
